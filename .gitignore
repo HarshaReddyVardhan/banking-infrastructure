@@ -1,0 +1,20 @@
+# Sensitive Data
+.env
+*.pem
+kubeconfig
+*.key
+*.crt
+*.p12
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Terrafrom
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# IDE
+.idea/
+.vscode/
