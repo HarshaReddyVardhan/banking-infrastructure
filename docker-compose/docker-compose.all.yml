@@ -227,6 +227,7 @@ services:
     restart: on-failure
 
   transaction-service:
+    build:
       context: ../../
       dockerfile: banking-transaction-service/Dockerfile
     container_name: banking-transaction-service
