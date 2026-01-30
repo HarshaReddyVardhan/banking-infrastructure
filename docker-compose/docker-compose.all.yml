@@ -227,9 +227,8 @@ services:
     restart: on-failure
 
   transaction-service:
-    build:
-      context: ../../banking-transaction-service
-      dockerfile: Dockerfile
+      context: ../../
+      dockerfile: banking-transaction-service/Dockerfile
     container_name: banking-transaction-service
     ports:
       - "8081:8081"
@@ -338,7 +337,7 @@ services:
   aml-service:
     build:
       context: ../../banking-aml-service
-      dockerfile: Dockerfile
+      dockerfile: deployments/docker/Dockerfile
     container_name: banking-aml-service
     ports:
       - "8085:8085"
@@ -359,8 +358,9 @@ services:
 
   audit-service:
     build:
-      context: ../../banking-audit-compliance
-      dockerfile: Dockerfile
+
+      context: ../../
+      dockerfile: banking-audit-compliance/deployments/docker/Dockerfile
     container_name: banking-audit-service
     ports:
       - "8086:8086"
